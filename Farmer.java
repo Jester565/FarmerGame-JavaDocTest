@@ -139,4 +139,22 @@ public class Farmer {
 	{
 		return health;
 	}
+	
+	/**
+	* Accessor for the {@link #x} attribute.  Which represents the horizontal position of the Farmer.
+	* @return The value of {@link #x}.  Representing the horizontal position of the Farmer.
+	*/
+	public float getX()
+	{
+		return x;
+	}
+	
+	/**
+	* Accessor for the {@link #y} attribute.  Which represents the vertical position of the Farmer.
+	* @return The value of {@link #y}.  Representing the vertical position of the Farmer.
+	*/
+	public float getY()
+	{
+		return y;
+	}
 }
