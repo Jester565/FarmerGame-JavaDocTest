@@ -38,7 +38,7 @@ public class PotatoMan {
 	 * The default contructor for the class {@link PotatoMan}. Will have {@link #world}, an initial {@link #x}, and an initial {@link #y}.
 	 * 
 	 */
-	public PotatoMan(World, x, y) {
+	public PotatoMan(World world, float x, float y) {
 		
 	}
 	

@@ -2,9 +2,6 @@ package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 import java.util.ArrayList;
 
-import game.Spike;
-import game.World;
-
 /**
  * This class represents a platform.  A piece of solid ground that will prevent dynamic bodies, such as the {@link Farmer}
  * and {@link PotatoMan} from falling.  The platform can move between two points or remain in one position.

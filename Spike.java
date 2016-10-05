@@ -30,7 +30,7 @@ public class Spike {
 	/**
 	 * This field represents the damage the player will take upon contact with the spike. This field cannot be modified.
 	 */
-	private const DAMAGE;
+	private final int DAMAGE;
 	/**
 	 * This is the constructor for the Spike. Will have {@link OffPlatX}. {@link SpikeHeight}, and {@link SpikeWidth}
 	 */
@@ -47,7 +47,7 @@ public class Spike {
 	 * This method calculates damage against the Farmer
 	 * @param Farmer health value is reduced by {@link #Damage}
 	 */
-	public void checkDamage(Farmer float hp){
+	public void checkDamage(Farmer farmer){
 		
 	}
 }
