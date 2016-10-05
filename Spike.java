@@ -47,7 +47,7 @@ public class Spike {
 	 * This method calculates damage against the Farmer
 	 * @param Farmer health value is reduced by {@link #Damage}
 	 */
-	public void checkDamage(Farmer float hp){
+	public void checkDamage(Farmer farmer){
 		
 	}
 }
