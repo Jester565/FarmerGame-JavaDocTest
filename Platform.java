@@ -110,6 +110,11 @@ public class Platform {
 		
 	}
 	
+	public int checkDamage(Farmer farmer)
+	{
+		
+	}
+	
 	/**
 	 * Adds {@link #vX} to {@link #x} and adds {@link #vY} to {@link #y} to move the position of the {@link Platform}.  {@link #dis} is incremented to keep track of when the {@link Platform} needs to go in the opposite direction.  This direction switch happens when {@link #dis} is greater than {@link #maxDis}.
 	 */
