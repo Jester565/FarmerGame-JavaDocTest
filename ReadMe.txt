@@ -1,0 +1,11 @@
+Team: Random Six
+Members: 
+Hao Zheng (Team Captain): HUD
+Alex Craig: Platform, Farmer
+Jason Kwok: DigSite, Spike
+Jessica Castron: Item
+Francisco Rodriguez: PotatoMan
+James Taracevicz: Shotgun, Bullet
+A group of six will design a 2D platformer and focus on class design.  Seven to fourteen classes will be created and their methods and attributes will be fully documented by using JavaDocs.   A description of the process of creating the project will also be required.
+The team began by brainstorming possible game themes.  Initially we came up with the enemy type and the rest of the game theme revolved around that.  The result was a farm themed platformer.  Now that the concept was complete, we went about deciding what nouns we used to describe our game.  Most of these nouns became classes.  Through a group meeting, we began fleshing out the classes by determining their behaviors and attributes.  However, we did not have time to fully describe each component.  Instead, we only made class, method, and attribute names as well as their general purposes and put them into a UML diagram.  The descriptions would be done individually.  Each team member was assigned a class or classes that would be fully documented using JavaDocs.  The only exception was the World class because it was imperative to the other classes.  The UML diagram helped standardize our links so less editing would have to be done when we put it all together.  The second meeting brought all of the source code together.  Several large changes were made in order to improve the cohesiveness of the code.  After, we began to combine our source code by using Git and GitHub.  Everyone was informed on how to use these tools so further work could be done in a home environment.  We also wrote the read me file.
+Documentation is an important aspect of programming.  However, group communication is necessary.  It is difficult to use comments to explain the larger design of the program.  We also learned about important group tools.  It may be basic but the whiteboard is essential.  Writing out outlines on the whiteboard allows for everyone to contribute and view the team’s collective work.  Another important tool we learned how to use was Git and GitHub.  These tools allowed us to easily combine our source code.  We also learned about the core elements of a game, such as the draw method. 
