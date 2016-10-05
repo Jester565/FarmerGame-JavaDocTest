@@ -16,62 +16,65 @@
  * Jason
  * James Taracevicz
  */
-package game;
+package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 import java.util.ArrayList;
 
 /**
- * Shotgun class represents a shotgun in the game which can be shot reloaded,
- * hold ammo in the clip, and more. 
+ * Shotgun class represents a shotgun in the game which fires an infinite amount of bullets but shots are delayed
+ * using a timer
  * 
  * @author James Taracevicz
  * 
  */
 public class Shotgun {
-    
-    /**
-     * The x coordinate for the location to draw the gun.
-     * Refers to the top left x coordinate of the gun graphic.
-     */
-    private float x;
-    
-    /**
-     * The y coordinate for the location to draw the gun.
-     * Refers to the top left y coordinate of the gun graphic.
-     */
-    private float y;
+	
+	/**
+	 * This field represents the minimum value of {@link #shotTimer} before {@link #shoot()} can create another 
+	 * bullet.  This variable cannot be reassigned.
+	 */
+	private static final int RATE_OF_FIRE = 0;
+	
+	/**
+	 * The amount of damage done by the {@link Bullet}s created by the {@link #shoot(float, float, float)} method.
+	 */
+	private static final int BULLET_DAMAGE = 0;
+	
+	/**
+	 * The speed multiplier fore the {@link Bullet}s created by the {@link #shoot(float, float, float)} method.
+	 */
+	private static final float BULLET_SPEED_MULTIPLIER = 0;
        
     /**
-     * The delay in milliseconds between gun shots.
+     * This field controls the guns fire rate.  Initially set to the value of {@link #RATE_OF_FIRE}.  
+     * {@link #shoot()} checks if this value is greater than {@link #RATE_OF_FIRE}.  When the gun creates 
+     * a bullet, this field is set to {@code 0}.
      */
-    private int shotDelay;
-           
+    private int shotTimer;
+    
     /**
-     * Construct a {@link Shotgun} object without parameters. Initializes all
-     * of the attributes needed.
+     * This field contains all of the active {@link Bullet}s shot.  Initialized in constructor and populated by the
+     * {@link #shoot(float, float, float) method}.
+     */
+    private ArrayList <Bullet> bullets;
+    
+    /**
+     * Construct a {@link Shotgun} object without parameters. Initializes {@link #shotTimer} to {@code 0}.
      */
     public Shotgun()
     {
         
     }
-    
-    /**
-     * Construct a {@link Shotgun} object and assign it coordinates. 
-     * Initializes all of the attributes needed, and it sets {@link #x} and 
-     * {@link #y} to {@code this} {@code x} and {@code y}.
-     * @param spawnX x coordinate to spawn the gun at
-     * @param spawnY y coordinate to spawn the gun at
-     */
-    public Shotgun(float spawnX, float spawnY)
-    {
-        
-    }
        
     /**
-     * Send some bullets flying (from gun nozzle). 
-     * containing {@link Bullet} objects.
+     * Adds {@link Bullet} to the {@link #bullets} array at the trajectory and position specified by the parameters
+     * and specifies the {@link Bullet}'s speed multiplier and damage using {@link #BULLET_DAMAGE}  and {@link #BULLET_SPEED_MULTIPLIER}
+     * if {@link #shotTimer} is greater than {@link #RATE_OF_FIRE}.
+     * @param x The horizontal position of the gun
+     * @param y The vertical position of the gun
+     * @param angle The angle that the bullet is being shot at
      */
-    public void shoot()
+    public void shoot(float x, float y, float angle)
     {
         
     }
@@ -80,9 +83,23 @@ public class Shotgun {
      * Draw the gun on the game canvas to display graphically.
      * This can be called when the player has the
      * gun equipped, or when the gun is sitting in the {@link World}.
+     * Will iterate over the {@link #bullets} array and call {@link Bullet#draw()} and {@link Bullet#move()} on
+     * each {@link Bullet} object.
+     * Calls {@link #updateTimer()}.
+     * @param x The horizontal coordinates to draw the image of the gun.
+     * @param y The vertical coordinates to draw the image of the gun.
+     * @param angle The radians which the gun image will be rotated around at the origin.
      */
-    public void draw()
+    public void draw(float x, float y, float angle)
     {
         
+    }
+    
+    /**
+     * Increments the {@link #shotTimer} by {@code 1}.
+     */
+    private void updateTimer()
+    {
+    	
     }
 }

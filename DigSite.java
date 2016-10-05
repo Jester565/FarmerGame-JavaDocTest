@@ -1,4 +1,4 @@
-package game;
+package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 /**
  * This class holds information about the "DigSite" such as where it exists in the world, what item it holds, and whether or not its been dug up.

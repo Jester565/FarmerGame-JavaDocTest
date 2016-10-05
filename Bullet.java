@@ -1,24 +1,23 @@
 /**
  * CS 141: Intro to Programming and Problem Solving
- * Professor: Edwin RodrÃ­guez
+ * Professor: Edwin Rodríguez
  *
  * Programming Assignment #1
  *
  * <description-of-assignment>
- * Create imaginary game without writing functional code to practice writing
- * and using javadoc utility.
+ * Create a platformer without any code in the methods to practice working in a group, class design, and
+ * utilizing the javadoc utility.
  *
  * Random Six:
- * Hao
- * Alex
- * Fransisco
- * Jessica
- * Jason
+ * Hao Zheng
+ * Alex Craig
+ * Fransisco Rodriguez
+ * Jessica Castron
+ * Jason Kwok
  * James Taracevicz
  */
-package game;
 
-import java.util.ArrayList;
+package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 /**
  * Bullet class represents a bullet which is fired from a {@link Shotgun}
@@ -80,6 +79,8 @@ public class Bullet {
         
     }
     
+    
+    
     /**
      * Get how much damage {@code this} bullet does.
      * @return The amount of damage this {@link Bullet} does.
@@ -95,5 +96,13 @@ public class Bullet {
     public void draw()
     {
         
-    }    
+    }   
+    
+    /**
+     * Change the position of the bullet by adding {@link vX} to {@link x} and adding {@link vY} to {@link y}.
+     */
+    public void move()
+    {
+    	
+    }
 }

@@ -1,3 +1,4 @@
+package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 /**
  * This class represents an enemy called PotatoMan and contains the attributes

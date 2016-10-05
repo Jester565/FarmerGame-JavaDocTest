@@ -1,4 +1,4 @@
-package game;
+package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 /**
  * Represents the player.  Has a position and can move through user input.  The Farmer can also take damage and

@@ -10,7 +10,7 @@
  *   Hao Zheng
  */
 
-package Asignment1;
+package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 /**
  * This class represents a HUD and the attributes/behaviors normally 

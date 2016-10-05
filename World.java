@@ -1,4 +1,4 @@
-package game;
+package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 import java.util.ArrayList;
 

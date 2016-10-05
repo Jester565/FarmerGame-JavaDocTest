@@ -1,4 +1,4 @@
-package ;
+package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 /*
  * This class holds information about "Spike" objects. Information such as position, spike height and width, and how much damage will do to the player.
