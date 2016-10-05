@@ -68,9 +68,9 @@ public class Shotgun {
     }
        
     /**
-     * Send some bullets flying (from gun nozzle).     
-	*containing {@link Bullet} objects.
-	*/
+     * Send some bullets flying (from gun nozzle). 
+     * containing {@link Bullet} objects.
+     */
     public void shoot()
     {
         
@@ -80,7 +80,7 @@ public class Shotgun {
      * Draw the gun on the game canvas to display graphically.
      * This can be called when the player has the
      * gun equipped, or when the gun is sitting in the {@link World}.
-	*/
+     */
     public void draw()
     {
         
