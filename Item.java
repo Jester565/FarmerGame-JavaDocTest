@@ -12,7 +12,7 @@ public class Item {
 	 * This is a special number assigned to each item to identify it. Each item has a different
 	 * number.
 	 */
-	private int id;
+	private int ID;
 	
 	/**
 	 * The description is an explanation of what the item does; weather it can heal the {@link Farmer}
@@ -32,14 +32,15 @@ public class Item {
 	
 	/**
 	 * This field allows the item class to access {@link Farmer} class so that the
-	 * so that the items can effect the {@link Farmer}.
+	 * items can effect the {@link Farmer}.
 	 */
-	private Farmer farmerInItem;
+	private Farmer farmer;
 		
 	/**
-	 * This allows the item to see the {@link Farmer}'s health and speed.
+	 * This is the default contructor for the class {@link Item}. It will contain {@link Farmer} as
+	 * well as default conditions for the {@link #speedGained}, {@link #healthRestored} and {@link #ID}.
 	 */
-	public Item( Farmer Farmer ){
+	public Item( Farmer Farmer, int speedGained, int healthRestored, int ID ){
 		
 	}
 	
