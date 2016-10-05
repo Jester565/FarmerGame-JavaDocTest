@@ -30,7 +30,7 @@ public class Spike {
 	/**
 	 * This field represents the damage the player will take upon contact with the spike. This field cannot be modified.
 	 */
-	private const DAMAGE;
+	private final DAMAGE;
 	/**
 	 * This is the constructor for the Spike. Will have {@link OffPlatX}. {@link SpikeHeight}, and {@link SpikeWidth}
 	 */
