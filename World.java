@@ -58,6 +58,12 @@ public class World {
 	private ArrayList<Platform> platforms;
 	
 	/**
+	 * This field represents all of the {@link Bullet}s in the world.  The ArrayList will be initialized in the constructor
+	 * and populated through calls to {@link #addBullet(Bullet)}.  
+	 */
+	private ArrayList<Bullet> bullets;
+	
+	/**
 	 * Displays information about the player's inventory and is drawn in the {@link #draw()} method.  Initialized in constructor and is never reassigned.
 	 */
 	private HUD hud;
@@ -77,6 +83,7 @@ public class World {
 	 * Draws the {@link Farmer} by calling {@link Farmer#draw()}.
 	 * Calls {@link Farmer#move()}.
 	 * Draws the {@link HUD} by calling {@link HUD#draw()}.
+	 * Iterates through the {@link Bullet}s in the {@link #bullets} calling {@link Bullet#draw()}, {@link Bullet#move()}, and {@link Bullet#checkCollision(World)}.
 	 * Iterates through the {@link #platforms} and calls {@link Platform#draw()} and {@link Platform#move()}.
 	 * Iterates through the {@link #potatoMen} calling {@link PotatoMan#draw()} and {@link PotatoMan#move()}, will also remove the element if {@link PotatoMan#isDead()} returns {@code true}.
 	 */
@@ -155,6 +162,15 @@ public class World {
 	 * @return The {@link #hud} attribute that is drawn to the world in front of all the environment and players.
 	 */
 	public HUD getHUD()
+	{
+		
+	}
+	
+	/**
+	 * Pushes a {@link Bullet} to the {@link #bullets} array, to be drawn and updated.
+	 * @param bullet {@link Bullet} to be added to {@link bullets}.
+	 */
+	public void addBullet(Bullet bullet)
 	{
 		
 	}

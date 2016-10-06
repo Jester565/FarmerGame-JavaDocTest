@@ -86,7 +86,8 @@ public class PotatoMan {
 	
 	/**
 	 * This method uses {@link #shotgun} to attack the {@link Farmer}, if it is visible.  By using information from the {@link World} class,
-	 * the angle of the {@link Farmer} is determined and {@link Shotgun#shoot(float, float, float)} is used to fire at it.
+	 * the angle of the {@link Farmer} is determined and {@link Shotgun#shoot(float, float, float)} is used to fire at it.  The bullet returned
+	 * from the method is added to the {@link World} using the method {@link World#addBullet(Bullet)} if it is not {@code null}.
 	 */
 	private void attack() {
 		

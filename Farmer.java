@@ -123,6 +123,7 @@ public class Farmer {
 	
 	/**
 	 * Looks at user input to determine if the {@link Shotgun#shoot(float, float, float)} method should be called on the {@link #gun} attribute.
+	 * If the return of the shoot method is not {@code null}, it is added to the {@link World} using the {@link World#addBullet(Bullet)} method.
 	 */
 	public void checkShoot()
 	{
