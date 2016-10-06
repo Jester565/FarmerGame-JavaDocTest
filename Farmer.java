@@ -31,6 +31,11 @@ public class Farmer {
 	private int health;
 	
 	/**
+	* Multiplied to {@link #SPEED} in the {@link #move()} method to determine how fast the {@link Farmer} moves.
+	*/
+	private float speedMultiplier;
+	
+	/**
 	 * Field that stores the horizontal position of the {@link Farmer}.  Initialized by constructor and is set to the x parameter.  This variable is incremented or decremented by {@link #SPEED} in the {@link #move()}.
 	 */
 	private float x;
@@ -72,6 +77,15 @@ public class Farmer {
 	 * by calling the {@link World#getWorldX()} and {@link World#getWorldY()} accessors from the {@link #world} data member.  Will also call {@link Shotgun#draw}.
 	 */
 	public void draw()
+	{
+		
+	}
+	
+	/**
+	* Set the {@link #speedMultiplier} to the value speedMult.  So the movement speed can be increased or decreased.
+	* @param speedMult value to set {@link #speedMultiplier} to.
+	*/
+	public void setSpeedMultiplier(float speedMult)
 	{
 		
 	}
