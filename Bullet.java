@@ -1,6 +1,6 @@
 /**
  * CS 141: Intro to Programming and Problem Solving
- * Professor: Edwin Rodríguez
+ * Professor: Edwin Rodr&iacute;guez
  *
  * Programming Assignment #1
  *
@@ -78,7 +78,15 @@ public class Bullet {
         
     }
     
-    
+    /**
+     * Checks collision with game objects such as {@link Farmer}, {@link Spike},
+     * and others that are contained in {@link World} object passed as parameter.
+     * @param {@link World} object containing all game objects.
+     */
+    public void checkCollision(World world)
+    {
+    	
+    }
     
     /**
      * An accessor for the {@link damage} attribute, which gets how much damage {@code this} bullet inflicts.

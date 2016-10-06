@@ -1,6 +1,6 @@
 /**
  * CS 141: Intro to Programming and Problem Solving
- * Professor: Edwin Rodríguez
+ * Professor: Edwin Rodr&iacute;guez
  *
  * Programming Assignment #1
  *
@@ -73,8 +73,9 @@ public class Shotgun {
      * @param x The horizontal position of the gun
      * @param y The vertical position of the gun
      * @param angle The angle that the bullet is being shot at
+     * @return {@link Bullet} object that has been created and shot.
      */
-    public void shoot(float x, float y, float angle)
+    public Bullet shoot(float x, float y, float angle)
     {
         
     }
