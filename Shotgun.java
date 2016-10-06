@@ -1,21 +1,21 @@
 /**
  * CS 141: Intro to Programming and Problem Solving
- * Professor: Edwin RodrÃ­guez
+ * Professor: Edwin Rodríguez
  *
  * Programming Assignment #1
  *
- * <description-of-assignment>
- * Create imaginary game without writing functional code to practice writing
- * and using javadoc utility.
+ * Create a platformer without any code in the methods to practice working in a group, class design, and
+ * utilizing the javadoc utility.
  *
- * Random Six:
- * Hao
- * Alex
- * Fransisco
- * Jessica
- * Jason
+ * Team #3 (Random Six):
+ * Hao Zheng (Group Leader)
+ * Alex Craig
+ * Fransisco Rodriguez
+ * Jessica Castron
+ * Jason Kwok
  * James Taracevicz
  */
+
 package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 import java.util.ArrayList;
@@ -84,7 +84,7 @@ public class Shotgun {
      * This can be called when the player has the
      * gun equipped, or when the gun is sitting in the {@link World}.
      * Will iterate over the {@link #bullets} array and call {@link Bullet#draw()} and {@link Bullet#move()} on
-     * each {@link Bullet} object.
+     * each element.
      * Calls {@link #updateTimer()}.
      * @param x The horizontal coordinates to draw the image of the gun.
      * @param y The vertical coordinates to draw the image of the gun.

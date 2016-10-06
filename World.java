@@ -1,3 +1,21 @@
+/**
+ * CS 141: Intro to Programming and Problem Solving
+ * Professor: Edwin Rodríguez
+ *
+ * Programming Assignment #1
+ *
+ * Create a platformer without any code in the methods to practice working in a group, class design, and
+ * utilizing the javadoc utility.
+ *
+ * Team #3 (Random Six):
+ * Hao Zheng (Group Leader)
+ * Alex Craig
+ * Fransisco Rodriguez
+ * Jessica Castron
+ * Jason Kwok
+ * James Taracevicz
+ */
+
 package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 import java.util.ArrayList;
@@ -5,7 +23,7 @@ import java.util.ArrayList;
 /**
  * This class represents the world.  Therefore, objects that make up the environment, such as Platforms, are stored
  * here as ArrayLists.  The Farmer, which is treated as the player, is an attribute along with an ArrayList of enemies.
- * All of these variables are drawn and dynamically removed.
+ * The HUD is also an attribute of this class.
  * @author ajcra
  *
  */
@@ -40,6 +58,11 @@ public class World {
 	private ArrayList<Platform> platforms;
 	
 	/**
+	 * Displays information about the player's inventory and is drawn in the {@link #draw()} method.  Initialized in constructor and is never reassigned.
+	 */
+	private HUD hud;
+	
+	/**
 	 * The default constructor for the class {@link Person}.  The constructor will initialize {@link #farmer} 
 	 * and sets the farmer name to {@code "No Name"}.  {@link #potatoMen} will be initialized and partially populated
 	 * with {@link PotatoMan} near the start of the world by making calls to the method {@link #spawnPotatoMen(float, float)}.  {@link #platforms} will be initialized and fully populated with 
@@ -51,8 +74,11 @@ public class World {
 	}
 	
 	/**
-	 * Iterates through the {@link #platforms} and calls {@link Platform#draw()}.
-	 * Iterates through the {@link #potatoMen} calling {@link PotatoMan#draw()}, will also remove the element if {@link PotatoMan#isDead()} returns {@code true}.
+	 * Draws the {@link Farmer} by calling {@link Farmer#draw()}.
+	 * Calls {@link Farmer#move()}.
+	 * Draws the {@link HUD} by calling {@link HUD#draw()}.
+	 * Iterates through the {@link #platforms} and calls {@link Platform#draw()} and {@link Platform#move()}.
+	 * Iterates through the {@link #potatoMen} calling {@link PotatoMan#draw()} and {@link PotatoMan#move()}, will also remove the element if {@link PotatoMan#isDead()} returns {@code true}.
 	 */
 	public void draw()
 	{
@@ -70,7 +96,7 @@ public class World {
 	}
 	
 	/**
-	 * Adds a new potatoman object to the potatoMen array
+	 * Adds a new {@link PotatoMan} object to the {@link #potatoMen} array.
 	 * @param x X-coordinate for the position of the potato man
 	 * @param y Y-coordinate for the position of the potato man
 	 */
@@ -107,23 +133,6 @@ public class World {
 	}
 	
 	/**
-	 * Accessor for the {@link #digSites} container, which contains all of the {@link DigSite}s in the {@link World}.
-	 * @return The {@link #digSites}, containing all of the {#link DigSite}s in the {@link World}
-	 */
-	public ArrayList<DigSite> getDigSites()
-	{
-	}
-	
-	/**
-	 * Accessor for the {@link #spikes} container, which contains all of the {@link Spike}s in the {@link World}.
-	 * @return The {@link #spikes}, containing all of the {#link Spike}s in the {@link World}
-	 */
-	public ArrayList<Spike> getSpikes()
-	{
-		
-	}
-	
-	/**
 	 * Accessor for the {@link #worldX} attribute, which keeps track of the horizontal position of the view for all objects in the {@link World}.
 	 * @return The {@link #worldX} attribute. Should be used in the x parameter in graphical draw methods so the view appears to move.
 	 */
@@ -137,6 +146,15 @@ public class World {
 	 * @return The {@link #worldY} attribute. Should be used in the y parameter in graphical draw methods so the view appears to move.
 	 */
 	public float getWorldY()
+	{
+		
+	}
+	
+	/**
+	 * Accessor for the {@link #hud} attribute that is displayed on the {@link #draw()} method.
+	 * @return The {@link #hud} attribute that is drawn to the world in front of all the environment and players.
+	 */
+	public HUD getHUD()
 	{
 		
 	}

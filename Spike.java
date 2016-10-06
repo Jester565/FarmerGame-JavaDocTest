@@ -1,3 +1,21 @@
+/**
+ * CS 141: Intro to Programming and Problem Solving
+ * Professor: Edwin Rodríguez
+ *
+ * Programming Assignment #1
+ *
+ * Create a platformer without any code in the methods to practice working in a group, class design, and
+ * utilizing the javadoc utility.
+ *
+ * Team #3 (Random Six):
+ * Hao Zheng (Group Leader)
+ * Alex Craig
+ * Fransisco Rodriguez
+ * Jessica Castron
+ * Jason Kwok
+ * James Taracevicz
+ */
+
 package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 /*
@@ -44,10 +62,12 @@ public class Spike {
 		
 	}
 	/**
-	 * This method calculates damage against the {@link Farmer}
-	 * @param farmer calls {@link Farmer#takeDamage(int) with {@link #Damage} as the damage parameter.
+	 * Checks if the {@link Farmer} is in range by comparing the spikes coordinates (which are calculated by adding {@link #offPlatX} to the platformX parameter, and the y coordinate is not needed because it is already assumed that the {@link Farmer} and {@link Platform} are colliding)
+	 * to the {@link Farmer}'s position, found by using {@link Farmer#getX()} and {@link Farmer#getY()}.  If in range, call {@link #dealDamage(Farmer)} passing in the farmer as a parameter.  Otherwise do nothing.
+	 * @param farmer the {@link Farmer} to compare coordinates to and to be damaged if in range.
+	 * @param platformX the horizontal position of the platform so the coordinate of {@code this} {@link Spike} could be calculated.
 	 */
-	public void checkDamage(Farmer farmer){
+	public void checkDamage(Farmer farmer, float platformX){
 		
 	}
 	/**

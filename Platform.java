@@ -1,10 +1,28 @@
+/**
+ * CS 141: Intro to Programming and Problem Solving
+ * Professor: Edwin Rodríguez
+ *
+ * Programming Assignment #1
+ *
+ * Create a platformer without any code in the methods to practice working in a group, class design, and
+ * utilizing the javadoc utility.
+ *
+ * Team #3 (Random Six):
+ * Hao Zheng (Group Leader)
+ * Alex Craig
+ * Fransisco Rodriguez
+ * Jessica Castron
+ * Jason Kwok
+ * James Taracevicz
+ */
+
 package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 import java.util.ArrayList;
 
 /**
  * This class represents a platform.  A piece of solid ground that will prevent dynamic bodies, such as the {@link Farmer}
- * and {@link PotatoMan} from falling.  The platform can move between two points or remain in one position.
+ * and {@link PotatoMan} from falling.  The platform can move between two points.
  * @author ajcra
  *
  */
@@ -111,7 +129,7 @@ public class Platform {
 	}
 	
 	/**
-	* Iterates over all of the {@link #spikes} and calls the {@link Spike#checkDamage(Farmer)}.
+	* Iterates over all of the {@link #spikes} and calls the {@link Spike#checkDamage(Farmer, float)} method on each element.
 	* @param farmer The {@link Farmer} which represents the player from the {@link World}.
 	*/
 	public void checkDamage(Farmer farmer)
@@ -122,7 +140,7 @@ public class Platform {
 	/**
 	* Iterates over all of the {@link #digSites} and calls the {@link DigSite#checkDig(float, float)} method on each {@link DigSite} object.
 	* @param x1 Position to check if a {@link DigSite} is in range of.
-	* @return The {@link Item} returned by {@link DigSite#checkDig(float, float)}.
+	* @return The {@link Item} returned by {@link DigSite#checkDig(float, float)}. May be {@code null}.
 	*/
 	public Item checkDig(float x1)
 	{
@@ -135,6 +153,17 @@ public class Platform {
 	 * {@link #dis} is greater than {@link #maxDis}.
 	 */
 	public void move()
+	{
+		
+	}
+	
+	/**
+	 * Returns {@code true} if the bodyX and bodyY coordinates are inside of {@code this} {@link Platform}.  Done by checking if the parameter coordinates are greater than {@link #x} and {@link #y}.  But are within the {@link #width} and {@link #height}.
+	 * @param bodyX The x coordinate to check if it is inside {@code this} {@link Platform}.
+	 * @param bodyY The y coordinate to check if it is inside {@code this} {@link Platform}
+	 * @return {@code true} if the coordinates are inside the {@code Platform} bounds, {@code} false otherwise.
+	 */
+	public boolean isColliding(float bodyX, float bodyY)
 	{
 		
 	}

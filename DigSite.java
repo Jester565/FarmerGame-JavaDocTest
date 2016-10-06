@@ -2,13 +2,11 @@ package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 /**
  * This class holds information about the "DigSite" such as where it exists in the world, what item it holds, and whether or not its been dug up.
- * 
- *
  */
 public class DigSite {
 	/**
-	 * This field represents the item that the DigSite holds upon creation. Initially {@code null}, this field will be changed upon creation of the DigSite. 
-	 * After its first reassignment, the field will not be reassigned.
+	 * This field represents the {@link Item} that the DigSite holds upon creation.
+	 * After the constructor is called, the field will not be reassigned.
 	 */
 	private Item item;
 	
@@ -35,14 +33,6 @@ public class DigSite {
 	}
 	
 	/**
-	 * Checks if isDug() is false and if so will return an item to the player.
-	 * @return {@link #Item}
-	 */
-	public Item Dig(){
-		
-	}
-	
-	/**
 	 * This method returns {@link #dug} to see if the DigSite is still available to dig up.
 	 * @return {@link #dug}
 	 */
@@ -51,7 +41,7 @@ public class DigSite {
 	}
 	
 	/**
-	 * Draws the DigSite at the platform x and y location.
+	 * Draws the {@code this} {@link #DigSite(float, Item)} at the platform x and y location.
 	 * @param platformX - Horiztonal location of where to draw the Digsite
 	 * @param platformY - Vertical location of where to draw the Digsite
 	 */
@@ -60,10 +50,10 @@ public class DigSite {
 	}
 	
 	/**
-	* Checks if the x1 parameter is near {@link #offPlatX} {@code +} {@link #platformX}.
+	* Checks if the x1 parameter is near {@link #offPlatX} {@code +} {@link #platformX} and {@link #dug} is {@code false}, if so, then the {@link #item} is returned and {@link #dug} is set to {@code true}. 
 	* @param platfromX position of the platform so that x1 can be compared
 	* @param x1 horizontal position to check if it is close to the {@link DigSite}
-	* @return Creates a {@link Item} and returns it if x1 is close to the {@link DigSite} x position.  If not, then null is returned.
+	* @return The {@link #item} field is returned it if x1 is close to the {@link DigSite} x position.  If not, then {@code null} is returned.
 	*/
 	public Item checkDig(float platformX, float x1)
 	{

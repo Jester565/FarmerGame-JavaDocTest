@@ -1,3 +1,21 @@
+/**
+ * CS 141: Intro to Programming and Problem Solving
+ * Professor: Edwin Rodríguez
+ *
+ * Programming Assignment #1
+ *
+ * Create a platformer without any code in the methods to practice working in a group, class design, and
+ * utilizing the javadoc utility.
+ *
+ * Team #3 (Random Six):
+ * Hao Zheng (Group Leader)
+ * Alex Craig
+ * Fransisco Rodriguez
+ * Jessica Castron
+ * Jason Kwok
+ * James Taracevicz
+ */
+
 package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 /**
@@ -31,22 +49,22 @@ public class Farmer {
 	private int health;
 	
 	/**
-	* Multiplied to {@link #SPEED} in the {@link #move()} method to determine how fast the {@link Farmer} moves.
+	* Multiplied to {@link #SPEED} in the {@link #move()} method to determine how fast {@code this} {@link Farmer} moves.
 	*/
 	private float speedMultiplier;
 	
 	/**
-	 * Field that stores the horizontal position of the {@link Farmer}.  Initialized by constructor and is set to the x parameter.  This variable is incremented or decremented by {@link #SPEED} in the {@link #move()}.
+	 * Field that stores the horizontal position of {@code this} {@link Farmer}.  Initialized by constructor and is set to the x parameter.  This variable is incremented or decremented by {@link #SPEED} multiplied by {@link #speedMultiplier} in the method {@link #move()}.
 	 */
 	private float x;
 	
 	/**
-	 * Field that stores the vertical position of the {@link Farmer}.  Initialized by constructor and is set to the y parameter. This variable is incremented or decremented by {@link #SPEED} in the {@link #move()}.
+	 * Field that stores the vertical position of {@code this} {@link Farmer}.  Initialized by constructor and is set to the y parameter. This variable is incremented or decremented by {@link #SPEED} multiplied by {@link #speedMultiplier} in the method {@link #move()}.
 	 */
 	private float y;
 	
 	/**
-	 * Field that stores the name for the Farmer.  This text is displayed above the farmer image in the {@link #draw()}.  The value will not change.  Initialized by the constructor to the parameter name.
+	 * Field that stores the name of the {@code this} {@link Farmer}.  This text is displayed above the image in the {@link #draw()}.  The value will not change.  Initialized by the constructor to the parameter name.
 	 */
 	private String name;
 	
@@ -61,7 +79,8 @@ public class Farmer {
 	private World world;
 	
 	/**
-	 * 
+	 * Creates a farmer and provides a reference to {@link World}, so environment and enemy information could be accessed.  The spawn position is also specified by
+	 * the x and y parameters.  The name is also copied to the {@link #name} variable.
 	 * @param world {@link #world} will store this parameter as a data member for future reference by the {@link #draw()} method.
 	 * @param name {@link #name} is set to the value of this parameter so that the text can be displayed in the {@link #draw()} method.
 	 * @param x {@link #x} is set to this value to keep the horizontal drawing position.
@@ -74,7 +93,7 @@ public class Farmer {
 	
 	/**
 	 * Draws the image and {@link #name} value to the screen using the {@link #x} and {@link #y} coordinates which are adjusted to the world view
-	 * by calling the {@link World#getWorldX()} and {@link World#getWorldY()} accessors from the {@link #world} data member.  Will also call {@link Shotgun#draw}.
+	 * by calling the {@link World#getWorldX()} and {@link World#getWorldY()} accessors from the {@link #world} data member.  Will also call {@link Shotgun#draw(float, float, float)}.
 	 */
 	public void draw()
 	{
@@ -93,7 +112,9 @@ public class Farmer {
 	/**
 	 * Looks at user input to determine if {@link #x} or {@link #y} should have {@link #SPEED} added to them or not.
 	 * When movement occurs {@link World#translate(float, float)} is called with the change in the player's position as parameters.
-	 * This allows the World's camera to follow the player.
+	 * This allows the World's camera to follow the player.  Calls {@link #dig()} if a certain user input is entered.
+	 * Movement may be blocked if when iterating through the {@link Platform}s returned by {@link World#getPlatforms()}, {@link Platform#isColliding(float, float)} returns {@code true}.
+	 * If a {@link Platform} is colliding with a player, {@link Platform#checkDamage(Farmer)} will be called passing {@link this} as a parameter.
 	 */
 	public void move()
 	{
@@ -101,7 +122,7 @@ public class Farmer {
 	}
 	
 	/**
-	 * Looks at user input to determine if the {@link Shotgun::shoot(float, float, float)} method should be called on the {@link #gun} attribute.
+	 * Looks at user input to determine if the {@link Shotgun#shoot(float, float, float)} method should be called on the {@link #gun} attribute.
 	 */
 	public void checkShoot()
 	{
@@ -136,7 +157,7 @@ public class Farmer {
 	}
 	
 	/**
-	 * Resets {@link #health} to {@link #MAX_HEALTH}.  The position of the {@link Farmer} is set to the last checkpoint by setting {@link #x} to checkPointX and {@link #y} to checkPointY.
+	 * Resets {@link #health} to {@link #MAX_HEALTH}.  The position of {@code this} {@link Farmer} is set to the last checkpoint by setting {@link #x} to checkPointX and {@link #y} to checkPointY.
 	 * @param checkPointX Horizontal coordinate to set {@link #x} to.
 	 * @param checkPointY Vertical coordinate to set {@link #y} to.
 	 */
@@ -170,5 +191,15 @@ public class Farmer {
 	public float getY()
 	{
 		return y;
+	}
+	
+	/**
+	 * Iterates through all of the {@link Platform}s from {@link World#getPlatforms()} and calls {@link Platform#checkDig(float)} on each one.
+	 * If an {@link Item} is returned, it is added to the {@link HUD} using the method {@link HUD#addItem(Item)}.  The HUD object
+	 * is acquired by using {@link World#getHUD()} accessor.
+	 */
+	private void dig()
+	{
+		
 	}
 }

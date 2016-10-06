@@ -1,7 +1,25 @@
+/**
+ * CS 141: Intro to Programming and Problem Solving
+ * Professor: Edwin Rodríguez
+ *
+ * Programming Assignment #1
+ *
+ * Create a platformer without any code in the methods to practice working in a group, class design, and
+ * utilizing the javadoc utility.
+ *
+ * Team #3 (Random Six):
+ * Hao Zheng (Group Leader)
+ * Alex Craig
+ * Fransisco Rodriguez
+ * Jessica Castron
+ * Jason Kwok
+ * James Taracevicz
+ */
+
 package edu.cpp.cs.cs141.prog_assgmnt_1;
 
 /**
- * The {@link Item} class is used to store the item ID and a description of the item. It will also be 
+ * Class that is used to store the item ID and a description of the item. It will also be 
  * able to use the item.
  * @author Jessica Castron
  *
@@ -9,19 +27,19 @@ package edu.cpp.cs.cs141.prog_assgmnt_1;
 public class Item {
 	
 	/**
-	 * This is a special number assigned to each item to identify it. Each item has a different
-	 * number.
+	 * This is a special number assigned to each type of {@link Item} to identify it. Each {@link Item} type has a different
+	 * number associated with it.  This value is set from the constructor and will not changed afterwards.
 	 */
 	private int id;
 	
 	/**
-	 * The description is an explanation of what the item does; weather it can heal the {@link Farmer}
+	 * The description is an explanation of what the {@link Item} does; whether it can heal the {@link Farmer}
 	 * or speed it up.
 	 */
 	private String description;
 	
 	/**
-	 * This field stores weather the item will restore health and if so how much.
+	 * This field stores whether the item will restore health and if so how much.
 	 */
 	private int healthRestored;
 	
@@ -58,9 +76,18 @@ public class Item {
 	}
 	
 	/**
-	 * This will use the items; changing the {@link Farmer}'s health or speed accordingly.
+	 * This will use the {@link Item}; changing the {@link Farmer}'s health or speed accordingly.
 	 */
 	public void use(){
+		
+	}
+	
+	/**
+	 * Accessor for the {@link #id}.  Which tells what type of {@link Item} {@code this} is.
+	 * @return The value of {@link #id} which specifies the item type.
+	 */
+	public int getID()
+	{
 		
 	}
 

@@ -4,12 +4,11 @@
  *
  * Programming Assignment #1
  *
- * <description-of-assignment>
  * Create a platformer without any code in the methods to practice working in a group, class design, and
  * utilizing the javadoc utility.
  *
- * Random Six:
- * Hao Zheng
+ * Team #3 (Random Six):
+ * Hao Zheng (Group Leader)
  * Alex Craig
  * Fransisco Rodriguez
  * Jessica Castron
@@ -27,31 +26,31 @@ package edu.cpp.cs.cs141.prog_assgmnt_1;
 public class Bullet {
     
     /**
-     * The x coordinate for the location to draw the gun.
-     * Refers to the top left x coordinate of the gun graphic.
+     * The horizontal coordinate for the location to draw the image of the gun.
+     * Refers to the top left x coordinate of the gun graphic. 
      */
     private float x;
     
     /**
-     * The y coordinate for the location to draw the gun.
+     * The vertical coordinate for the location to draw the gun.
      * Refers to the top left y coordinate of the gun graphic.
      */
     private float y;
     
         
     /**
-     * The x component vector of the velocity.
+     * The horizontal velocity of the bullet.  Added to the {@link #x} field every time {@link #move()} is called
      */
     private float velocityX;
     
     /**
-     * The y component vector of the velocity.
+     * The vertical velocity of the bullet.  Added to the {@link #y} field every time {@link #move()} is called.
      */
     private float velocityY;
         
     /**
-     * The velocity gets multiplied by this value to adjust bullet speed.
-     * Generally each bullet has a constant speed.
+     * The {@link #velocityX} and {@link #velocityY} fields are multiplied by this value to adjust bullet speed every time {@link #move()} is called.
+     * Generally each bullet has a constant speed.  Initialized by constructor and is not modified after.
      */
     private float speedMultiplier;
     
@@ -82,7 +81,7 @@ public class Bullet {
     
     
     /**
-     * Get how much damage {@code this} bullet does.
+     * An accessor for the {@link damage} attribute, which gets how much damage {@code this} bullet inflicts.
      * @return The amount of damage this {@link Bullet} does.
      */
     public int getDamage()
@@ -91,7 +90,7 @@ public class Bullet {
     }
     
     /**
-     * Draw {@code this} bullet to the canvas to display graphically.
+     * Draw {@code this} bullet to the canvas to display graphically.  Use the {@link x} and {@link y} to determine the coordinates to draw it.
      */
     public void draw()
     {
