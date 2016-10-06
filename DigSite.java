@@ -58,4 +58,15 @@ public class DigSite {
 	public void draw(float platformX, float platformY){
 		
 	}
+	
+	/**
+	* Checks if the x1 parameter is near {@link #offPlatX} {@code +} {@link #platformX}.
+	* @param platfromX position of the platform so that x1 can be compared
+	* @param x1 horizontal position to check if it is close to the {@link DigSite}
+	* @return Creates a {@link Item} and returns it if x1 is close to the {@link DigSite} x position.  If not, then null is returned.
+	*/
+	public Item checkDig(float platformX, float x1)
+	{
+		
+	}
 }
