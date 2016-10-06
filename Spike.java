@@ -27,13 +27,18 @@ public class Spike {
 	private int spikeWidth;
 	/**
 	 * This is the constructor for the Spike. Will have {@link offPlatX}. {@link spikeHeight}, and {@link spikeWidth}
+	 * @param offPlatX {@link #offPlatX} is set to this value to keep the x position
+	 * @param spikeHeight {@link #spikeHeight} is set to this value to keep the height
+	 * @param spikeWidth {@link #spikeWidth} is set to this value to keep the width
 	 */
 	public Spike(float offPlatX, int spikeHeight, int spikeWidth){
 		
 	}
 	/**
 	 * Draws the Spike at platformX {@code +} {@link #offPlatX} and platformY location along with its height, represented by
-	 {@link #spikeHeight}, and width, represented by {@link #spikeWidth}.
+	 * {@link #spikeHeight}, and width, represented by {@link #spikeWidth}.
+	 * @param platformX - Horizontal position for the spike to be drawn at
+	 * @param platformY - Vertical position for the spike to the drawn at
 	 */
 	public void draw(float platformX, float platformY){
 		

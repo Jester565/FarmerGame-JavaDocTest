@@ -11,26 +11,26 @@ public class DigSite {
 	 * After its first reassignment, the field will not be reassigned.
 	 */
 	private Item item;
+	
 	/**
 	 * This field represents the horizontal position of the DigSite. Initially {@code 0}, this field will be changed upon creation of the DigSite. 
 	 * After its first reassignment, the field will not be reassigned.
 	 */
-	private float OffPlatX;
-	/**
-	 * This field represents the vertical position of the DigSite. Initially {@code 0}, this field will be changed upon creation of the DigSite. 
-	 * After its first reassignment, the field will not be reassigned.
-	 */
-	private float OffPlatY;
+	private float offPlatX;
+
 	/**
 	 * This field holds information on the state of the DigSite. Initially {@code false}, the boolean 
 	 * is changed to {@code true} after a call to {@link #Dig()}
 	 */
 	private boolean dug;
+	
 	/**
-	 * Default Constructor for the DigSite. Will have no {@link worldX}, 
-	 * has {@link dug} {@code false}, and no {@link Item}.
+	 * Default Constructor for the DigSite. Will have no {@link #offPlatX}, 
+	 * has {@link dug} {@code false}, and no {@link #Item}.
+	 * @param offPlatX {@link #offPlatX} is set to this value to keep the horizontal drawing position. 
+	 * @param Item {@link #item} is set to this value to store the item that the digsite holds
 	 */
-	public DigSite(float OffPlatX, Item Item){
+	public DigSite(float offPlatX, Item Item){
 		
 	}
 	
@@ -51,7 +51,9 @@ public class DigSite {
 	}
 	
 	/**
-	 * Draws the DigSite at the platform x and y. 
+	 * Draws the DigSite at the platform x and y location.
+	 * @param platformX - Horiztonal location of where to draw the Digsite
+	 * @param platformY - Vertical location of where to draw the Digsite
 	 */
 	public void draw(float platformX, float platformY){
 		
