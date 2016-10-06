@@ -51,18 +51,11 @@ public class Spike {
 		
 	}
 	/**
-	 * Reduces {@link Farmer#health} by amount = {@link #DAMAGE}
+	 * Reduces {@link Farmer#health} by {@link #DAMAGE}
 	 * by calling {@link Farmer#takeDamage(int)}
 	 * @param {@link Farmer} object which will have its {@link Farmer#health} reduced
 	 */
 	public void dealDamage(Farmer farmer){
-		
-	}
-	/**
-	 * Returns the amount of damage {@code this} {@link Spike} does
-	 * @return {@link #DAMAGE} value
-	 */
-	public int getDamage(){
 		
 	}
 }
