@@ -110,13 +110,29 @@ public class Platform {
 		
 	}
 	
+	/**
+	* Iterates over all of the {@link #spikes} and calls the {@link Spike#checkDamage(Farmer)}.
+	* @param farmer The {@link Farmer} which represents the player from the {@link World}.
+	*/
 	public int checkDamage(Farmer farmer)
 	{
 		
 	}
 	
 	/**
-	 * Adds {@link #vX} to {@link #x} and adds {@link #vY} to {@link #y} to move the position of the {@link Platform}.  {@link #dis} is incremented to keep track of when the {@link Platform} needs to go in the opposite direction.  This direction switch happens when {@link #dis} is greater than {@link #maxDis}.
+	* Iterates over all of the {@link #digSites} and calls the {@link DigSite#checkDig(float, float)} method on each {@link DigSite} object.
+	* @param x1 Position to check if a {@link DigSite} is in range of.
+	* @return The {@link Item} returned by {@link DigSite#checkDig(float, float)}.
+	*/
+	public Item checkDig(float x1)
+	{
+		
+	}
+	
+	/**
+	 * Adds {@link #vX} to {@link #x} and adds {@link #vY} to {@link #y} to move the position of the {@link Platform}.  {@link #dis} is 
+	 * incremented to keep track of when the {@link Platform} needs to go in the opposite direction.  This direction switch happens when 
+	 * {@link #dis} is greater than {@link #maxDis}.
 	 */
 	public void move()
 	{
