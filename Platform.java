@@ -114,7 +114,7 @@ public class Platform {
 	* Iterates over all of the {@link #spikes} and calls the {@link Spike#checkDamage(Farmer)}.
 	* @param farmer The {@link Farmer} which represents the player from the {@link World}.
 	*/
-	public int checkDamage(Farmer farmer)
+	public void checkDamage(Farmer farmer)
 	{
 		
 	}
